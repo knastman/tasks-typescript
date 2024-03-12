@@ -152,7 +152,7 @@ console.log('Nya arrayen 2.6 blir: ' + arraySameNumberOfElements([1, 5, 10, 20, 
 
 console.log('___________________________2.7');
 
-console.log('_________________________HIT ÄR KLART_________________________');
+console.log('_________________________2.7 EJ KLAR/FUNKAR INTE _________________________');
 
 
 /****************** Övning 2.7 **********************/
@@ -253,8 +253,8 @@ const personObject2:PersonAndAge ={
 personObject1.presentation();
 personObject2.presentation();
 
-console.log('____________');
-/****************** Övning 3.3 **********************/
+console.log('___________________________3.2');
+/****************** Övning 3.2 **********************/
 
 // Skriv en type alias för ett bil-objekt som ska innehålla tre egenskaper:
 // model som är en string
@@ -262,7 +262,6 @@ console.log('____________');
 // price som är ett number
 // Skriv en funktion som tar emot ett bil-objekt och returnerar ett nytt bil-objekt
 // Funktionen ska räkna om priset efter 20% rabatt och returnera ett bil-objekt med det nya priset
-
 
 type carObject ={
   model:string, 
@@ -279,8 +278,6 @@ console.log(carObject1);
 
 
 function carObjectDiscount(carObject){
-  // console.log(carObject.price);
-
   const newCarObjectprice = carObject.price - (carObject.price * 0.20);
   // console.log(newCarObjectprice);
 
@@ -290,15 +287,14 @@ function carObjectDiscount(carObject){
     price:newCarObjectprice
   }
   // console.log(newCarObject);
-  
-  return newCarObject;
 
+  return newCarObject;
 }
 carObjectDiscount(carObject1)
 console.log(carObjectDiscount(carObject1));
 
 
-console.log('____________');
+console.log('___________________________3.3');
 
 
 /****************** Övning 3.3 **********************/
@@ -318,14 +314,13 @@ type AnimalObject = {
 }
 
 const animal1:AnimalObject = {
-  name:'Bosse', 
-  type:'Cat', 
-  age:14
+  name: 'Bosse', 
+  type: 'Cat', 
+  age: 14
 }
 
 function logAnimal(animal:AnimalObject){
   console.log(animal);
-  
 }
 
 logAnimal(animal1);
