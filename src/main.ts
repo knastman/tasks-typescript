@@ -150,9 +150,10 @@ function arraySameNumberOfElements(array1:number[]):string[] {
 
 console.log('Nya arrayen 2.6 blir: ' + arraySameNumberOfElements([1, 5, 10, 20, 15, 10]));
 
-console.log('HIT ÄR KLART___________________________');
-
 console.log('___________________________2.7');
+
+console.log('_________________________HIT ÄR KLART_________________________');
+
 
 /****************** Övning 2.7 **********************/
 // Skriv en higher order funktion som har tre parametrar, en av typ Function och två av typ number array. Arrayerna behöver vara lika långa. Funktionen ska returnera en number array. 
@@ -163,55 +164,61 @@ console.log('___________________________2.7');
 
 // Higher order funktionen returnerar en array med resultatet av beräkningarna som görs med callback-funktionen
 
-function returnNumberArray(par1:Function, array1:number[], array2:number[]):number[]{
+const array1 = [1, 2, 3, 4];
+const array2 = [2, 3, 4, 5];
+;
 
-  // for (arrayNumbers of array1){
-  //   par1(para1, para2)
-  // }
+function returnNumberArray(func:Function, nrArray1:number[], nrArray2:number[]):number[] {
+  // console.log(func(array1, array2));
+  // const resultFromFunc = func(array1, array2);
+  let resultFromFunc;
+  
+  const arg1 =  nrArray1.forEach((arraynumber) => {
+    console.log(func);
+  });
+  const arg2 =  nrArray2.forEach((arraynumber) => {
+    console.log(func);
+  });
 
-  for (let i=0; i<array1.length; i++){
-    console.log('Detta är forloopen och i är ' + i);
-    par1(par1, par2);
-  }
-
-  // let resultArray = array1.forEach(arrayNumber => {
-  //   par1(array1, array2)
-  // });
-  // let resultArray = par1(array1, array2);
+  console.log(arg1);
 
   // console.log('resultArray');
-  // console.log(resultArray);
+  // console.log(resultArray)
   
-  // return resultArray;
+  return resultFromFunc;
 }
 
-function multi2(arg1:number, arg2:number):number{
-  const sum = arg1 * arg2;
-  return sum;
-}
-
-
-function add(arg1:number, arg2:number):number{
+function callbackAdd(arg1:number, arg2:number):number {
   const sum = arg1 + arg2;
   return sum;
 }
 
-// const result1 = returnNumberArray(add, [1, 2, 3, 4], [2, 3, 4, 5]);
-// const result2 = returnNumberArray(multi2, [1, 2, 3, 4], [2, 3, 4, 5]);
+function callbackMulti(arg1:number, arg2:number):number {
+  const sum = arg1 * arg2;
+  return sum;
+}
+// const resultAdd = returnNumberArray(add, [1, 2, 3, 4], [2, 3, 4, 5]);
+// const resultMulti = callbackAdd(multi2, [1, 2, 3, 4], [2, 3, 4, 5]);
 
-// returnNumberArray(multi2, 5, 2);
-// returnNumberArray(add, 10, 20);
-// returnNumberArray(add, [1, 2, 3, 4], [2, 3, 4, 5]);
+const resultAdd = returnNumberArray(callbackAdd, array1, array2);
+const resultMulti = returnNumberArray(callbackMulti, array1, array2);
+
+console.log(resultAdd); //[3, 5, 7, 9],
+console.log(resultMulti);//[2, 6, 12, 20]
+
+// console.log(returnNumberArray(resultAdd, 10, 20));
+// console.log(returnNumberArray(resultMulti, 5, 2));
+
+// returnNumberArray(resultAdd, [1, 2, 3, 4], [2, 3, 4, 5]);
 
 // console.log(result1);
 // console.log(result2);
 
-// ResultArray från add()-> [3, 5, 7, 9],  
-// från multiply()-> [2, 6, 12, 20]
 
-console.log('___________________________3.1');
+
+
 console.log('___________________________OBJECT___________________________');
-console.log('___________________________DETTA___________________________');
+console.log('___________________________3.1');
 
 /****************** Övning 3.1 **********************/
 
