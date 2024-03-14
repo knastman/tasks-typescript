@@ -42,6 +42,10 @@ if (typeof(variabel3) == 'number' ){
 }
 console.log(variabel1);
 
+// Ny version
+const isItANumber = typeof(variabel2) == 'number';
+console.log(isItANumber);
+
 
 console.log('___________________________FUNCTION__________________________');
 console.log('___________________________2.1');
@@ -63,23 +67,39 @@ console.log('___________________________2.2');
 // Skriv en funktion som tar emot två argument av typ number och returnerar ett värde av typ boolean
 // Funktionen ska addera de två argumenten och returnera true om summan är mer eller lika med 10, och false i annat fall
 
+//Mitt orginal, långa versionen /////
+// function moreOrLessThan10(argument1:number, argument2:number):boolean {
+//   const sum = argument1 + argument2;
+//   console.log(sum);
+//   let isItMore; 
+  
+//   if(sum >= 10) {
+//     console.log('Summan är mer än 10');
+//     isItMore = true;
+//   }
+//   else {
+//     console.log('Summan är mindre än 10');
+//     isItMore = false;
+//   }
+//   return isItMore
+// }
+
+//Bättre skriva som kortare version medan://////
 function moreOrLessThan10(argument1:number, argument2:number):boolean {
   const sum = argument1 + argument2;
-  console.log(sum);
-  let isItMore; 
-  
-  if(sum >= 10) {
-    console.log('Summan är mer än 10');
-    isItMore = true;
-  }
-  else {
-    console.log('Summan är mindre än 10');
-    isItMore = false;
-  }
-  return isItMore
+  const isItMore = sum >= 10;  
+    return isItMore;
 }
+
+
 // moreOrLessThan10(2,5);
 console.log(moreOrLessThan10(3,5));
+
+
+// Ännu kortare version
+function moreOrLessThan10(argument1:number, argument2:number):boolean {
+  return (argument1 + argument2) >= 10;
+}
 
 console.log('___________________________2.3');
 
